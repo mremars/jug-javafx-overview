@@ -1,0 +1,73 @@
+
+* JUG
+
+** MainSceneController
+
+*** Without Bindings
+#+BEGIN_SRC java
+  /**
+   * on key typed
+   */
+  @FXML
+  public void textChanged() {
+      if (LOG.isTraceEnabled()) { LOG.entry(); }
+
+      //
+
+      label.setText(Integer.toString(textField.getText().length()));
+      checkBox.setSelected(textField.getText().length() == 0);
+  }
+#+END_SRC
+
+*** With Bindings
+
+#+BEGIN_SRC java
+
+  label.textProperty().bind(textField.textProperty().length().asString());
+
+  checkBox.selectedProperty().bind(textField.textProperty().length().isEqualTo(0));
+
+#+END_SRC
+
+*** With Bindings & Model
+
+#+BEGIN_SRC java
+
+  private final StringProperty text = new SimpleStringProperty();
+  public final StringProperty textProperty() { return text; }
+  public String getText() { return text.get(); }
+  public void setText(String text) { this.text.set(text); }
+
+  // constructor
+
+  textProperty().addListener((observable, oldValue, newValue) -> {
+          if (LOG.isDebugEnabled()) { LOG.debug("oldValue={}, newValue={}", oldValue, newValue); }
+      });
+
+  setText("Hello World");
+
+  // initialize
+  
+  textField.textProperty().bindBidirectional(textProperty());
+  label.textProperty().bind(textProperty().length().asString());
+  checkBox.selectedProperty().bind(textProperty().length().isEqualTo(0));
+
+#+END_SRC
+
+
+** World Clock
+
+#+BEGIN_SRC java
+
+  AnimationTimer timer = new AnimationTimer() {
+          /**
+           ,* documentation
+           ,*/
+          @Override
+          public void handle(long now) {
+              setDateTime(ZonedDateTime.now(getZoneId()));
+          }
+      };
+  timer.start();
+  
+#+END_SRC

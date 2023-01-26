@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Scene xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="600.0" prefWidth="800.0">
+      <children>
+         <TextField fx:id="textField" layoutX="136.0" layoutY="108.0" prefHeight="26.0" prefWidth="216.0" />
+         <Label fx:id="label" layoutX="136.0" layoutY="145.0" text="Label" />
+         <CheckBox fx:id="checkBox" layoutX="290.0" layoutY="145.0" mnemonicParsing="false" text="Vide ?" />
+      </children></AnchorPane>
+</Scene>

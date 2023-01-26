@@ -1,0 +1,69 @@
+
+@font-face {
+    font-family: 'IBM Plex Mono Bold';
+    src: local('IBM Plex Mono Bold'),
+         local('IBMPlexMono-Bold'),
+         url('../fonts/IBMPlexMono-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans SmBld';
+    src: local('IBM Plex Sans SmBld'),
+         local('IBMPlexSans-SmBld'),
+         url('../fonts/IBMPlexSans-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Cond Light';
+    src: local('IBM Plex Sans Cond Light'),
+         local('IBMPlexSansCond-Light'),
+         url('../fonts/IBMPlexSansCondensed-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Cond SmBld';
+    src: local('IBM Plex Sans Cond SmBld'),
+         local('IBMPlexSansCond-SmBld'),
+         url('../fonts/IBMPlexSansCondensed-SemiBold.otf') format('opentype');
+}
+
+.case {    
+    -fx-fill: #161616;
+    -fx-arc-width: 30;
+    -fx-arc-height: 200;
+    -fx-stroke: linear-gradient(from 42.2803% 18.5273% to 100.0% 97.1496%, #000000 0.0%, #ffffff 100.0%);
+}
+
+.year {
+    -fx-font-family: 'IBM Plex Sans Cond SmBld';
+    -fx-font-size: 1.75em;
+    -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #210847 0.0%, #ffffff 100.0%);
+}
+
+.month-of-year {
+    -fx-font-family: 'IBM Plex Sans Cond Light';
+    -fx-font-size: 1.75em;    
+    -fx-text-fill: #ffffff;
+}
+
+.day-of-month {
+    -fx-font-family: 'IBM Plex Mono Bold';
+    -fx-font-size: 3.375em;
+    -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #be22ff 20.0%, #ff279c 50%, #ff981f 80.0%);
+}
+
+.alarm {
+    -fx-fill: #da1e28;
+}
+
+.day-of-week {
+    -fx-font-family: 'IBM Plex Sans Cond SmBld';
+    -fx-font-size: 2.5em;
+    -fx-text-fill: #ffffff;
+}
+
+.time {
+    -fx-font-family: 'IBM Plex Mono Bold';
+    -fx-font-size: 1.75em;
+    -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #dc36fa, #a167ef 30%,#609fe4 45%,#3abfde 70%,#04d18e 85%);
+}

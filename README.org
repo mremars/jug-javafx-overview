@@ -1,0 +1,7 @@
+* JavaFX Overview
+
+** Compilation
+
+#+BEGIN_SRC sh
+  mvn clean javafx:run
+#+END_SRC

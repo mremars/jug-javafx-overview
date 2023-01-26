@@ -1,0 +1,11 @@
+.DS_Store
+*~
+**/*#
+**/.#*
+**/#*#
+target
+.classpath
+.factorypath
+.project
+.settings
+.java-version
